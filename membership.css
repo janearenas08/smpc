@@ -57,9 +57,14 @@ main {
     background-color: #fff8b6;
     margin-left: 90px;
     margin-right: 90px;
+    margin-bottom: 5px;
     border-style: solid;
     border-color: #8bc34a;
     border-width: 5px;
+}
+
+.member {
+    margin-top: 10px;
 }
 
 main h1 {
@@ -84,6 +89,7 @@ main p{
     position: relative;
     margin-left: 90px;
     margin-right: 90px;
+    margin-bottom: 5px;
     grid-template-columns: auto auto;
     background-color:  #fff8b6;
     padding: 10px;
@@ -172,10 +178,13 @@ div.grid-container{
     padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 25px;
+    margin-left: 115px;
 }
 
 .grid-address > p{
     text-indent: 30px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
@@ -189,6 +198,7 @@ div.grid-container{
     padding-right: 50px;
     width: 90%;
     height: 90%;
+    /*display: inline-block;*/
     box-sizing: border-box;
     float: center;
 }
@@ -198,24 +208,136 @@ div.grid-container{
 /* Phone View */
 @media only screen and (max-width:480px) {
 
-   /* navigation bar */
-   .grid-container-topnav img {
-    float: left;
-    margin-left:35px;
-    width: 75%;
-    height: auto;
+    /* navigation bar */
+   
+    .grid-container-topnav {
+        display: inline-block;
+        grid-template-columns: auto;
     }
 
-    .grid-container-topnav {
-    display: inline-block;
+    .grid-container-topnav img {
+        position: relative;
+        float: center;
+        margin-left:55px;
+        width: 55%;
+        height: auto;
+        padding-bottom: 0px;
+    }
+
+    .grid-container-topnav ul {
+        margin-right: 15px;
+    }
+
+    .grid-container-topnav li {
+        height: 24px;
+        margin-bottom: 4px;
+        display: list-item;
+        float: left;
     }
 
     .grid-container-topnav li a {
-    float: center;
-    font-size: 12px;
+        float: left;
+        font-size: 10px;
+        
     }
     /* end navigation bar */
-    /* main */
+
+    /* main phone view */
+    main {
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    main h1 {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: 30px;
+    }
+
+    main p {
+        margin-left: 15px;
+        margin-right: 15px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .grid-container {
+        display: inline-block;
+    }
+
+    div.grid-container {
+       padding-left: 0px;
+       padding-right: 0px;
+    }
+
+    div.grid-container h2 {
+        font-size: 20px;
+    }
+
+    .grid-container li {
+        font-size: 15px;
+    }
+
+    /* footer phone view*/
+    .grid-container-footer {
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .grid-quick-links h3 {
+      padding-left: 25px;
+    }
+
+    .grid-quick-links li a {
+        padding-left: 15px;
+    }
+
+    #map {
+        padding-left: 45px;
+    }
+}
+    /* End Phone View */
+
+    /* Tablet View */
+
+    @media only screen and (min-width:481px) and (max-width:1024px) {
+        /* navigation bar */
+   
+    .grid-container-topnav {
+        display: inline-block;
+        grid-template-columns: auto;
+    }
+
+    .grid-container-topnav img {
+        position: relative;
+        float: center;
+        margin-left:205px;
+        width: 55%;
+        height: auto;
+        padding-bottom: 0px;
+    }
+
+    .grid-container-topnav ul {
+        margin-right: 15px;
+    }
+
+    .grid-container-topnav li {
+        height: 24px;
+        margin-bottom: 4px;
+        display: list-item;
+        float: left;
+    }
+
+    .grid-container-topnav li a {
+        float: left;
+        font-size: 10px; 
+    }
+    /* end navigation bar */
+
+    /* main tablet view*/
     main {
         display: inline-block;
         overflow: hidden;
@@ -271,33 +393,6 @@ div.grid-container{
     #map {
         padding-left: 45px;
     }
+
+    /* end tablet view */
 }
-    /* End Phone View */
-
-    /* Tablet View */
-
-    @media only screen and (min-width:481px) and (max-width:1024px) {
-         /* navigation bar */
-    nav img {
-        float: center;
-        margin-left: 105px;
-    }
-    
-    .grid-container-topnav {
-        display: inline-block;
-    }
-
-    nav li {
-        float: center;
-    }
-    /* end navigation bar */
-
-    /* main */
-    main p {
-        margin-left: 25px;
-        margin-right: 75px;
-        font-size: 25px;
-    }
-    }
-    
-    /* End Tablet View */

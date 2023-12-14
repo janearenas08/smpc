@@ -72,6 +72,7 @@ main h1 {
 
 .logo {
     position: relative;
+    float: center;
     box-sizing: 150px;
     margin-left: 3cm;
 }
@@ -111,16 +112,18 @@ div.grid-container{
 }
 
 .grid-item h3 {
+    text-decoration: underline;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     color: #118a7e;
+    margin-left: 55px;
 }
 
 .grid-item ul {
     padding-top: 25px;
     list-style: none;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: #118a7e;
 }
@@ -306,21 +309,37 @@ div.grid-container{
 /* Phone View */
 @media only screen and (max-width:480px) { 
     
-    /* navigation bar */
-    .grid-container-topnav img {
-        float: left;
-        margin-left:35px;
-        width: 75%;
-        height: auto;
-    }
-    
-    .grid-container-topnav {
+     /* navigation bar */
+   
+     .grid-container-topnav {
         display: inline-block;
+        grid-template-columns: auto;
+    }
+
+    .grid-container-topnav img {
+        position: relative;
+        float: center;
+        margin-left:55px;
+        width: 55%;
+        height: auto;
+        padding-bottom: 0px;
+    }
+
+    .grid-container-topnav ul {
+        margin-right: 15px;
+    }
+
+    .grid-container-topnav li {
+        height: 24px;
+        margin-bottom: 4px;
+        display: list-item;
+        float: left;
     }
 
     .grid-container-topnav li a {
-        float: center;
-        font-size: 12px;
+        float: left;
+        font-size: 10px;
+        
     }
     /* end navigation bar */
     
@@ -334,6 +353,11 @@ div.grid-container{
         font-size: 30px;
     }
 
+    .row1 {
+        display: grid;
+        grid-template-rows: auto;
+    }
+
     .logo {
         position: relative;
         margin-left: 10px;
@@ -345,6 +369,8 @@ div.grid-container{
     }
 
     .grid-article {
+        box-sizing: none;
+        text-wrap: none;
        text-align: justify;
        font-size: 13px;
        padding-top: 150px;
@@ -360,6 +386,8 @@ div.grid-container{
     }
     
     .grid-item {
+        display: inline-block;
+        grid-template-columns: auto;
         background-color: none;
         border: none;
         padding: 0px;
@@ -367,202 +395,198 @@ div.grid-container{
     
     .grid-item h3 {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
+        font-size: 25px;
         text-align: left;
         text-decoration: underline;
         margin-right: 0px;
     }
     
     .grid-item ul {
-        padding-top: 25px;
+        padding-top: 20px;
         list-style: none;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        text-align: left;
-
+        font-size: 15px;
+        text-align: center;
     }
-    
-    .grid-item img {
+
+    .grid-item-two img {
         position: relative;
         box-sizing:unset;
         text-align: center;
         padding-top: 25px;
     }
     
-    .grid-item p {
+    .grid-item-two p {
         position: relative;
         margin-left: 55px;
         font-size: 12px;
     }
     
     .mission h2 {
-    font-size: 25px;
-    text-align: center;
-    text-decoration: underline  
+        font-size: 25px;
+        text-align: center;
+        text-decoration: underline  
     }
 
     .mission p {
-    position: relative;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    font-size: 13px;
-    text-align: center;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        font-size: 13px;
+        text-align: center;
     }
 
     .vision h2 {
-    font-size: 25px;
-    text-align: center;
-    text-decoration: underline  
+        font-size: 25px;
+        text-align: center;
+        text-decoration: underline  
     }
 
     .vision p {
-    position: relative;
-    padding-top: 15px;
-    padding-bottom: 25px;
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #118a7e;
-    text-align: center;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #118a7e;
+        text-align: center;
     }
 
     .grid-container-bldg {
-    display: inline-block;
-    grid-template-columns: auto;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 5px
+        display: inline-block;
+        grid-template-columns: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 5px
     }
 
     .grid-item-bldg {
-    padding: 10px;
+        padding: 10px;
     }
 
     div.grid-container{
-    border-width: 5px;
+        border-width: 5px;
     }
 
     .old-bldg h3 {
-    padding-bottom: 10px;
-    text-align: left;
+        padding-bottom: 10px;
+        text-align: left;
     }
 
     .old-bldg img {
-    position: relative;
-    margin-left: 5px;
+        position: relative;
+        margin-left: 5px;
     }
 
     .old-bldg p {
-    margin-left: 25px;
-    font-size: 10px;
+        margin-left: 25px;
+        font-size: 10px;
     }
 
     .new-bldg h3 {
-    padding-bottom: 25px;
-    text-align: left;
+        padding-bottom: 25px;
+        text-align: left;
     }
 
     .new-bldg img {
-    position: relative;
-    margin-left: 3px;
-    height: 150px;
+        position: relative;
+        margin-left: 3px;
+        height: 150px;
     }
 
     .new-bldg p {
-    margin-left: 25px;
-    font-size: 10px;
+        margin-left: 25px;
+        font-size: 10px;
     }
-/* end main */
+    /* end main phone view */
 
-/* footer */
-.grid-container-footer {
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
-}
+    /* footer */
+    .grid-container-footer {
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+    }   
 
-.grid-quick-links h3 {
-  padding-left: 25px;
-}
+    .grid-quick-links li a {
+        padding-left: 15px;
+    }
 
-.grid-quick-links li a {
-    padding-left: 15px;
-}
-
-#map {
-    padding-left: 45px;
-}
+    #map {
+        padding-left: 45px;
+    }
 }
 /* End Phone View */
 
- /* Tablet View */
+/* Tablet View */
 
  @media only screen and (min-width:481px) and (max-width:1024px) {
     /* navigation bar */
-nav img {
-   float: center;
-   margin-left: 105px;
-}
+    nav img {
+        float: center;
+        margin-left: 105px;
+    }
 
-.grid-container-topnav {
-   display: inline-block;
-}
+    .grid-container-topnav {
+        display: inline-block;
+    }
 
-nav li {
-   float: center;
-}
-/* end navigation bar */
+    nav li {
+        float: center;
+    }
+    /* end navigation bar */
 
-/* main */
-main p {
-   margin-left: 25px;
-   margin-right: 75px;
-   font-size: 25px;
-}
-.grid-container-bldg {
-    display: inline-block;
-    grid-template-columns: auto;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 5px
+    /* main */
+    main p {
+        margin-left: 25px;
+        margin-right: 75px;
+        font-size: 25px;
+    }
+
+    .grid-container-bldg {
+        display: inline-block;
+        grid-template-columns: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 5px
     }
 
     .grid-item-bldg {
-    padding: 10px;
+        padding: 10px;
     }
 
     div.grid-container{
-    border-width: 5px;
+        border-width: 5px;
     }
 
     .old-bldg h3 {
-    padding-bottom: 10px;
-    text-align: left;
+        padding-bottom: 10px;
+        text-align: left;
     }
 
     .old-bldg img {
-    position: relative;
-    margin-left: 15px;
+        position: relative;
+        margin-left: 15px;
     }
 
     .old-bldg p {
-    margin-left: 25px;
-    font-size: 10px;
+        margin-left: 25px;
+        font-size: 10px;
     }
 
     .new-bldg h3 {
-    padding-bottom: 25px;
-    text-align: left;
+        padding-bottom: 25px;
+        text-align: left;
     }
 
     .new-bldg img {
-    position: relative;
-    margin-left: 15px;
-    height: 350px;
+        position: relative;
+        margin-left: 15px;
+        height: 350px;
     }
 
     .new-bldg p {
-    margin-left: 25px;
-    font-size: 10px;
+        margin-left: 25px;
+        font-size: 10px;
     }
 }
 
